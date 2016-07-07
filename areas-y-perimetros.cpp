@@ -4,6 +4,7 @@
 
 #include<iostream>
 #include <math.h> 
+#define pi 3.1415926535897
 
 using namespace std;
 struct Punto {
