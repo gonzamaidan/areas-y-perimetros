@@ -3,6 +3,7 @@
 */
 
 #include<iostream>
+#include <math.h> 
 
 using namespace std;
 struct Punto {
@@ -95,15 +96,33 @@ double GetAreaCirculo(Circulo unCirculo) {
 };
 
 double GetPerimetroRectangulo(Rectangulo unRectangulo) {
-	return 0;
+       double perimetro = (unRectangulo.alto*2) + (unRectangulo.ancho*2);
+       
+    return perimetro;
 };
+
 double GetAreaRectangulo(Rectangulo unRectangulo) {
-	return 0;
+       double area = unRectangulo.alto * unRectangulo.ancho;
+    
+	return area;
 };
 
 double GetPerimetroTriangulo(Triangulo unTriangulo) {
-	return 0;
+	double ab = sqrt(pow(unTriangulo.b.x - unTriangulo.a.x,2) + pow(unTriangulo.b.y - unTriangulo.a.y,2));
+	double ac = sqrt(pow(unTriangulo.c.x - unTriangulo.a.x,2) + pow(unTriangulo.c.y - unTriangulo.a.y,2));
+	double bc = sqrt(pow(unTriangulo.c.x - unTriangulo.b.x,2) + pow(unTriangulo.c.y - unTriangulo.b.y,2));
+	return ab + ac + bc;
 };
 double GetAreaTriangulo(Triangulo unTriangulo) {
-	return 0;
+	Punto nAB;
+	nAB.x = unTriangulo.b.y - unTriangulo.a.y;
+	nAB.y = -(unTriangulo.b.x - unTriangulo.a.x);
+	Punto ac;
+	ac.x = unTriangulo.c.x - unTriangulo.a.x;
+	ac.y = unTriangulo.c.y - unTriangulo.a.y;
+	double area = (nAB.x * ac.x + nAB.y * ac.y)/2;
+	if (area < 0) {
+		area = -area;
+	}
+	return area;
 };
