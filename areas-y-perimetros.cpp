@@ -80,10 +80,18 @@ Triangulo ReadTriangulo() {
 };
 
 double GetCircunferencia(Circulo unCirculo) {
-	return unCirculo.radio * 3.14 *2;
+
+	double circunf;
+	circunf = 2 * pi*unCirculo.radio;
+	return circunf;
+
 };
 double GetAreaCirculo(Circulo unCirculo) {
-	return 0;
+
+	double areaC;
+	areaC = pi*unCirculo.radio*unCirculo.radio;
+	return areaC;
+
 };
 
 double GetPerimetroRectangulo(Rectangulo unRectangulo) {
