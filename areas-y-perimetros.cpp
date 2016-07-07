@@ -56,24 +56,26 @@ int main () {
 
 Punto ReadPunto() {
 	Punto punto;
-	punto.x = 0;
-	punto.y = 0;
+	cout<<"Ingrese las variables del Punto/n";
+	cin >> punto.x, punto.y;
 	return punto;
 };
 Circulo ReadCirculo() {
 	Circulo circulo;
 	circulo.centro = ReadPunto();
-	circulo.radio = 0;
+	cout << "Ingrese el radio del circulo/n";
+	cin >> circulo.radio;
 	return circulo;
 };
 Rectangulo ReadRectangulo() {
 	Rectangulo rectangulo;
 	rectangulo.origen = ReadPunto();
-	rectangulo.alto = 0;
-	rectangulo.ancho = 0;
+	cout << "Ingrese el alto y el ancho del rectangulo, respectivamente/n";
+	cin >> rectangulo.alto , rctangulo.ancho;
 };
 Triangulo ReadTriangulo() {
 	Triangulo triangulo;
+	cout << "Ingrese los puntos del triangulo/n";
 	triangulo.a = ReadPunto();
 	triangulo.b = ReadPunto();
 	triangulo.c = ReadPunto();
