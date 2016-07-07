@@ -80,7 +80,7 @@ Triangulo ReadTriangulo() {
 };
 
 double GetCircunferencia(Circulo unCirculo) {
-	return 0;
+	return unCirculo.radio * 3.14 *2;
 };
 double GetAreaCirculo(Circulo unCirculo) {
 	return 0;
