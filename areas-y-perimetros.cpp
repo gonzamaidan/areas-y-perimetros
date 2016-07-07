@@ -87,10 +87,15 @@ double GetAreaCirculo(Circulo unCirculo) {
 };
 
 double GetPerimetroRectangulo(Rectangulo unRectangulo) {
-	return 0;
+       double perimetro = (unRectangulo.alto*2) + (unRectangulo.ancho*2);
+       
+    return perimetro;
 };
+
 double GetAreaRectangulo(Rectangulo unRectangulo) {
-	return 0;
+       double area = unRectangulo.alto * unRectangulo.ancho;
+    
+	return area;
 };
 
 double GetPerimetroTriangulo(Triangulo unTriangulo) {
