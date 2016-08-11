@@ -4,5 +4,6 @@
 #include "punto.h"
 #include "rectangulo.h"
 #include "Circulo.h"
+#include "triangulo.h"
 
 using namespace std;
