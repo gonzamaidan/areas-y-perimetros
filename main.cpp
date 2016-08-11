@@ -2,14 +2,9 @@
 	areas-y-perimetros
 */
 
-#include<iostream>
-#include <math.h> 
-#define pi 3.1415926535897
+#include "header.h"
 
-using namespace std;
-struct Punto {
-	double x, y;
-};
+
 struct Circulo {
 	Punto centro;
 	double radio;
@@ -22,7 +17,6 @@ struct Triangulo {
 	Punto a,b,c;
 };
 
-Punto ReadPunto();
 Circulo ReadCirculo();
 Rectangulo ReadRectangulo();
 Triangulo ReadTriangulo();
@@ -55,28 +49,23 @@ int main () {
 	cout << "Area triangulo: " << GetAreaTriangulo(triangulo) << "\n";
 }
 
-Punto ReadPunto() {
-	Punto punto;
-	cout<<"Ingrese las variables del Punto/n";
-	cin >> punto.x, punto.y;
-	return punto;
-};
 Circulo ReadCirculo() {
 	Circulo circulo;
 	circulo.centro = ReadPunto();
-	cout << "Ingrese el radio del circulo/n";
+	cout << "Ingrese el radio del circulo\n";
 	cin >> circulo.radio;
 	return circulo;
 };
 Rectangulo ReadRectangulo() {
 	Rectangulo rectangulo;
 	rectangulo.origen = ReadPunto();
-	cout << "Ingrese el alto y el ancho del rectangulo, respectivamente/n";
-	cin >> rectangulo.alto , rctangulo.ancho;
+	cout << "Ingrese el alto y el ancho del rectangulo, respectivamente\n";
+	cin >> rectangulo.alto >> rectangulo.ancho;
+	return rectangulo;
 };
 Triangulo ReadTriangulo() {
 	Triangulo triangulo;
-	cout << "Ingrese los puntos del triangulo/n";
+	cout << "Ingrese los puntos del triangulo\n";
 	triangulo.a = ReadPunto();
 	triangulo.b = ReadPunto();
 	triangulo.c = ReadPunto();
