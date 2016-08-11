@@ -5,10 +5,7 @@
 #include "header.h"
 
 
-struct Circulo {
-	Punto centro;
-	double radio;
-};
+
 struct Rectangulo {
 	Punto origen;
 	double ancho, alto;
@@ -17,12 +14,11 @@ struct Triangulo {
 	Punto a,b,c;
 };
 
-Circulo ReadCirculo();
+
 Rectangulo ReadRectangulo();
 Triangulo ReadTriangulo();
 
-double GetCircunferencia(Circulo unCirculo);
-double GetAreaCirculo(Circulo unCirculo);
+
 
 double GetPerimetroRectangulo(Rectangulo unRectangulo);
 double GetAreaRectangulo(Rectangulo unRectangulo);
@@ -34,28 +30,22 @@ int main () {
 	Circulo circulo;
 	Rectangulo rectangulo;
 	Triangulo triangulo;
-	
+
 	circulo = ReadCirculo();
 	rectangulo = ReadRectangulo();
 	triangulo = ReadTriangulo();
-	
+
 	cout << "Perimetro circulo: " << GetCircunferencia(circulo) << "\n";
 	cout << "Area circulo: " << GetAreaCirculo(circulo) << "\n";
-	
+
 	cout << "Perimetro rectangulo: " << GetPerimetroRectangulo(rectangulo) << "\n";
 	cout << "Area rectangulo: " << GetAreaRectangulo(rectangulo) << "\n";
-	
+
 	cout << "Perimetro triangulo: " << GetPerimetroTriangulo(triangulo) << "\n";
 	cout << "Area triangulo: " << GetAreaTriangulo(triangulo) << "\n";
 }
 
-Circulo ReadCirculo() {
-	Circulo circulo;
-	circulo.centro = ReadPunto();
-	cout << "Ingrese el radio del circulo\n";
-	cin >> circulo.radio;
-	return circulo;
-};
+
 Rectangulo ReadRectangulo() {
 	Rectangulo rectangulo;
 	rectangulo.origen = ReadPunto();
@@ -72,30 +62,17 @@ Triangulo ReadTriangulo() {
 	return triangulo;
 };
 
-double GetCircunferencia(Circulo unCirculo) {
 
-	double circunf;
-	circunf = 2 * pi*unCirculo.radio;
-	return circunf;
-
-};
-double GetAreaCirculo(Circulo unCirculo) {
-
-	double areaC;
-	areaC = pi*unCirculo.radio*unCirculo.radio;
-	return areaC;
-
-};
 
 double GetPerimetroRectangulo(Rectangulo unRectangulo) {
        double perimetro = (unRectangulo.alto*2) + (unRectangulo.ancho*2);
-       
+
     return perimetro;
 };
 
 double GetAreaRectangulo(Rectangulo unRectangulo) {
        double area = unRectangulo.alto * unRectangulo.ancho;
-    
+
 	return area;
 };
 
